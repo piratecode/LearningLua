@@ -71,21 +71,19 @@ void TestLearning()
 
 
     //Lua Call C++ Class
+    /*
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
 
     LuaPerson::Register(L);
 
-    if(luaL_dofile(L, "../lua/TestLearningLua/Test_Class.lua")){
+    if(luaL_dofile(L, "../lua/TestLearningLua/Test_CppClass.lua")){
         std::cout << lua_tostring(L, -1) << std::endl;
     }
     lua_close(L);
-}
+    */
 
-int main() {
-
-    //TestLearning();
-
+    //Lua Call Lua Class
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
 
@@ -93,6 +91,12 @@ int main() {
         //std::cout << lua_tostring(L, -1) << std::endl;
     }
     lua_close(L);
+
+}
+
+int main() {
+
+    TestLearning();
 
     return 0;
 }
