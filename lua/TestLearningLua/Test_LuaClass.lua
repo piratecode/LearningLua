@@ -32,3 +32,4 @@ end
 local c = Child.new()
 print(c:GetName())
 print(c:GetAge())
+

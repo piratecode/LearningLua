@@ -84,6 +84,7 @@ void TestLearning()
     */
 
     //Lua Call Lua Class
+    /*
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
 
@@ -91,7 +92,16 @@ void TestLearning()
         //std::cout << lua_tostring(L, -1) << std::endl;
     }
     lua_close(L);
+    */
 
+    //Lua Modules
+    lua_State *L = luaL_newstate();
+    luaL_openlibs(L);
+
+    if (luaL_dofile(L, "../lua/init.lua")){
+        //std::cout << lua_tostring(L, -1) << std::endl;
+    }
+    lua_close(L);
 }
 
 int main() {
